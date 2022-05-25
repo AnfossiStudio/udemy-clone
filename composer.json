@@ -1,0 +1,16 @@
+{
+    "name": "workstation/udemy-clone",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "App\\Core\\": "app/core/",
+            "App\\Controllers\\": "app/controllers/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Mohamed anfossi"
+        }
+    ],
+    "require": {}
+}

@@ -1,8 +1,14 @@
 <?php
 
-function array_table($arr)
+namespace App\Core;
+
+class Helpers
 {
-  echo '<pre>';
-  print_r($arr);
-  echo '</pre>';
+
+  public static function  array_table($arr)
+  {
+    echo '<pre>';
+    print_r($arr);
+    echo '</pre>';
+  }
 }

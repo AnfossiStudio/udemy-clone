@@ -4,7 +4,6 @@ session_start();
 
 require '../app/core/init.php';
 
-$app = new App();
+use App\Core\App;
 
-?>
-<h1>Hello</h1>
+$app = new App();
