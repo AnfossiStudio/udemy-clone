@@ -20,23 +20,37 @@ class Config
     /**
      * Database Configurations
      */
-    if ($_SERVER['SERVER_NAME'] == 'localhost') {
+    if (isset($_SERVER['SERVER_NAME'])) {
+      print_r($_SERVER);
+
+      if ($_SERVER['SERVER_NAME'] == 'localhost') {
+        /**
+         *  Run on localhost server
+         */
+        define('DBHOST', 'localhost');
+        define('DBUSER', 'root');
+        define('DBPASSWORD', '');
+        define('DBNAME', 'udemy');
+        define('DBDRIVER', 'mysql');
+      } else {
+        /**
+         * Run on liveserver
+         */
+        define('DBHOST', 'localhost');
+        define('DBUSER', 'root');
+        define('DBPASSWORD', '');
+        define('DBNAME', '');
+        define('DBDRIVER', 'mysql');
+      }
+    } else {
+
       /**
-       *  Run on localhost server
+       *  Run on command line server
        */
       define('DBHOST', 'localhost');
       define('DBUSER', 'root');
       define('DBPASSWORD', '');
       define('DBNAME', 'udemy');
-      define('DBDRIVER', 'mysql');
-    } else {
-      /**
-       * Run on liveserver
-       */
-      define('DBHOST', 'localhost');
-      define('DBUSER', 'root');
-      define('DBPASSWORD', '');
-      define('DBNAME', '');
       define('DBDRIVER', 'mysql');
     }
   }

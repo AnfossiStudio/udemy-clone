@@ -2,10 +2,10 @@
 
 use App\Core\Controller;
 
-class Home extends Controller
+class User extends Controller
 {
   public function index()
   {
-    //
   }
 }
+    

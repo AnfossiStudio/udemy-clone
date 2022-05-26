@@ -21,6 +21,10 @@ class Model extends Database
     return $this->query($sql, $data);
   }
 
+
+  /**
+   * return all data from table
+   */
   public function all()
   {
     return $this->query('SELECT * FROM ' . $this->table);

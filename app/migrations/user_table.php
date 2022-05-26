@@ -7,13 +7,9 @@ class user_table
 {
   public static function build()
   {
-    return new Table('student', function () {
+    return new Table('user', function () {
       return [
-        Schema::id(),
-        Schema::string('firstname'),
-        Schema::string('lastname'),
-        Schema::string('role'),
-        Schema::timestamp()
+        Schema::id()
       ];
     });
   }

@@ -2,7 +2,7 @@
 
 namespace App\Core;
 
-class Table
+class Table extends Database
 {
 
   protected $table = '';
@@ -11,5 +11,8 @@ class Table
   {
     $this->table = $table;
     $this->columns = $columns();
+
+    $sql = "CREATE TABLE IF NOT EXISTS `" . $table . "` (" . join(',', $this->columns) . ")";
+    return $this->query($sql);
   }
 }
