@@ -70,10 +70,11 @@ class " . $name . "_table
     $name = ucfirst(strtolower(trim($name)));
     $template =
       "<?php
+namespace App\Controllers;
 
 use App\Core\Controller;
 
-class " . $name . " extends Controller
+class " . $name . "Controller extends Controller
 {
   public function index()
   {

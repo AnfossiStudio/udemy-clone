@@ -34,6 +34,8 @@ class App
       }
     }
 
+    echo $url . '<br>';
+
     call_user_func_array([$_controller, $this->method], $url);
   }
 

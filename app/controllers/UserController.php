@@ -1,11 +1,13 @@
 <?php
 
+namespace App\Controllers;
+
 use App\Core\Controller;
 
-class User extends Controller
+class UserController extends Controller
 {
   public function index()
   {
+    $this->view('home');
   }
 }
-    

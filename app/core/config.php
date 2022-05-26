@@ -21,7 +21,7 @@ class Config
      * Database Configurations
      */
     if (isset($_SERVER['SERVER_NAME'])) {
-      print_r($_SERVER);
+
 
       if ($_SERVER['SERVER_NAME'] == 'localhost') {
         /**

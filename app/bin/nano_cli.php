@@ -6,7 +6,7 @@ require 'cli.php';
  * 
  * //generate:model
  * //generate:table
- * generate:controller
+ * //generate:controller
  * 
  */
 
