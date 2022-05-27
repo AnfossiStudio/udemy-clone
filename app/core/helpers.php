@@ -16,6 +16,23 @@ class Helpers
   }
 
   /**
+   * render view page from views folder
+   */
+  public static function view($view, $params = [])
+  {
+
+    $view = str_replace(".", "/", $view);
+    $filename = '../app/views/' . $view . ".view.php";
+
+    if (file_exists($filename)) {
+      extract($params);
+      require $filename;
+    } else {
+      echo 'Count not found the view file ' . $filename;
+    }
+  }
+
+  /**
    * Validation for inputs
    */
   public static function Validate($validation)

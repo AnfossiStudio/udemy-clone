@@ -48,19 +48,12 @@ class Request
     return array_merge($_POST, $_GET);
   }
 
-  /**
-   * return once param
-   */
-  public function param($parname)
-  {
-    return $_POST[$parname];
-  }
-
-  private function getUrl()
+  private function getParams()
   {
     $url = $_GET['url'] ?? 'home';
     $url = filter_var($url, FILTER_SANITIZE_URL);
     $params = explode('/', $url);
+    
     return $params;
   }
 }

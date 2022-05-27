@@ -1,9 +1,11 @@
 <?php
 
-class _404
+use App\Core\Controller;
+
+class _404 extends Controller
 {
   public function __construct()
   {
-    echo '404 not found';
+    $this->view('error.404');
   }
 }

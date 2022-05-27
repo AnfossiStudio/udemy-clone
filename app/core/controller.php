@@ -9,7 +9,7 @@ class Controller
 {
   protected function view($view, $params = [])
   {
-
+    $view = str_replace(".", "/", $view);
     $filename = '../app/views/' . $view . ".view.php";
 
     if (file_exists($filename)) {

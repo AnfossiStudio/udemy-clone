@@ -2,6 +2,7 @@
 
 namespace App\Core\Http;
 
+use App\Core\Controller;
 use App\Core\Helpers;
 use App\Core\Http\Request;
 use App\Core\Http\Response;
@@ -36,9 +37,11 @@ class Route
     $path = $this->request->path();
     $method = $this->request->method();
     $action = self::$routes[$method][$path] ?? false;
+    $params = explode('/', trim($path, '/'));
 
     if (!$action) {
       // 404 file
+      Helpers::view('errors.404');
       return;
     }
 
